@@ -38,4 +38,13 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
+
+  def check_and_add(new)
+    if @@items.include?(new)
+      @@cart << new
+      return "added #{new}"
+    else
+      return "We don't have that item"
+    end
+  end
 end
